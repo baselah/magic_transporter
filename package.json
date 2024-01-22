@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.ts",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.ts"
@@ -14,6 +13,7 @@
     "@types/body-parser": "^1.19.5",
     "@types/express-validator": "^3.0.0",
     "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.11.5",
     "body-parser": "^1.20.2",
     "concurrently": "^8.2.2",
     "dotenv": "^16.3.2",
