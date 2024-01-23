@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import User from "./User.js";
+import User from "./User";
 import httpStatus from "http-status";
 
 export const addUser = async (req: Request, res: Response) => {
