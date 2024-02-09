@@ -30,13 +30,13 @@ const dotenv = __importStar(require("dotenv"));
 const express_1 = __importDefault(require("express"));
 const body_parser_1 = __importDefault(require("body-parser"));
 require("./config/database");
-const router_1 = __importDefault(require("./src/User/router"));
-const router_2 = __importDefault(require("./src/League/router"));
+const router_1 = __importDefault(require("./src/app/User/router"));
+const router_2 = __importDefault(require("./src/app/Champion/router"));
 const app = (0, express_1.default)();
 dotenv.config();
 app.use(body_parser_1.default.json());
 app.use("/league/api/user", router_1.default);
-app.use("/league/api/league", router_2.default);
+app.use("/league/api/champion", router_2.default);
 app.listen(process.env.PORT, function () {
     console.log(`Server is listening on localhost:${process.env.PORT}`);
 });

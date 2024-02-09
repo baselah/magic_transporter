@@ -19,10 +19,12 @@ userSchema.methods.generateAuthToken = function () {
   const expiresIn = "1d";
   const token = jwt
     .sign({ _id: user._id.toHexString(), access }, `${process.env.SECRETKEY}`, {
-      expiresIn
+      expiresIn,
     })
     .toString();
 
   return token;
 };
 export default mongoose.model<IUser>("User", userSchema);
+
+

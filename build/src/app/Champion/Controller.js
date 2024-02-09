@@ -13,16 +13,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.add = void 0;
-const League_1 = __importDefault(require("./League"));
+const Champion_1 = __importDefault(require("./Champion"));
 const http_status_1 = __importDefault(require("http-status"));
 const add = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { name, date } = req.body;
-        yield League_1.default.create({
+        yield Champion_1.default.create({
             name: name,
             date: date,
         });
-        res.status(http_status_1.default.OK).json({ result: "league add successfuly" });
+        res.status(http_status_1.default.OK).json({ result: "Champion add successfuly" });
     }
     catch (error) {
         res.status(http_status_1.default.BAD_REQUEST).json({ result: error.message });
