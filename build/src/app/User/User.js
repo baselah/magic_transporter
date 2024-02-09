@@ -16,7 +16,7 @@ userSchema.methods.generateAuthToken = function () {
     const expiresIn = "1d";
     const token = jsonwebtoken_1.default
         .sign({ _id: user._id.toHexString(), access }, `${process.env.SECRETKEY}`, {
-        expiresIn
+        expiresIn,
     })
         .toString();
     return token;
