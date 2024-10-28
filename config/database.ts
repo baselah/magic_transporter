@@ -1,13 +1,15 @@
 import mongoose from "mongoose";
 
+const mongoUrl: string = process.env.MONGOURL || '';
+
+
 mongoose.connect(
-  "mongodb+srv://root:root@cluster0.ank1pxn.mongodb.net/?retryWrites=true&w=majority",
+  mongoUrl,
   {}
 );
 
 const db = mongoose.connection;
 
-console.log('sadddddd');
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 db.once("open", () => {

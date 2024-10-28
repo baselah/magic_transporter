@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { validationPipe, IsString, IsNumber } from "./validationPipe";
+import { validationPipe } from "./validationPipe";
 import httpStatus from "http-status";
 
 export const validationMiddleware =
