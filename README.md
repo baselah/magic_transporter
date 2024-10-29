@@ -4,6 +4,11 @@
 
 Magic Transporter API is a RESTful API built with Node.js, TypeScript, and MongoDB. This API allows you to manage "Magic Movers" and "Magic Items," track their loading activities, and log missions.
 
+
+To view full documintation visit :
+
+https://documenter.getpostman.com/view/18554306/2sAY4uEPti
+
 ## Table of Contents
 
 - [Features](#features)
@@ -44,13 +49,13 @@ Magic Transporter API is a RESTful API built with Node.js, TypeScript, and Mongo
 
 1. Clone the repository:
 
-   git clone https://github.com/yourusername/magic-mover-api.git
-   cd magic-mover-api
+   git clone https://github.com/baselah/magic_transporter.git
+   cd magic_transporter
 
 2. Install dependencies:
    npm install
 
-3. Create a .env file in the root directory and configure your MongoDB URI:
+3. Copy a .env.example file and paste it in the root directory and configure your MongoDB URI and   Port:
 
    MONGODB_URI=mongodb://localhost:27017/magic-mover
 
