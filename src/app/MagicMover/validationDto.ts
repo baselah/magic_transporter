@@ -1,8 +1,7 @@
-import { IsNumber, Min } from "class-validator";
+import { IsNumber, Min } from 'class-validator';
 
 export class MoverDto {
-  
-    @IsNumber()
-    @Min(0)
-    weightLimit!: Number;
-  }
+  @IsNumber()
+  @Min(0)
+  weightLimit!: number;
+}

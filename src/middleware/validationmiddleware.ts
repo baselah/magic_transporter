@@ -1,6 +1,6 @@
-import { NextFunction, Request, Response } from "express";
-import { validationPipe } from "./validationPipe";
-import httpStatus from "http-status";
+import { NextFunction, Request, Response } from 'express';
+import { validationPipe } from './validationPipe';
+import httpStatus from 'http-status';
 
 export const validationMiddleware =
   (validationSchema: new () => {}) =>
@@ -9,11 +9,21 @@ export const validationMiddleware =
       ...req.body,
       ...req.params,
     });
-    if (result.errors) {
-      console.log(result);
+
+    if (result.length > 0) {
+      const errors = result.map(
+        (error: {
+          property: any;
+          target: any;
+          value: any;
+          constraints: any;
+        }) => ({
+          [error.property]: error.constraints,
+        }),
+      );
       return res.status(httpStatus.BAD_REQUEST).json({
         success: false,
-        ...result,
+        errors,
       });
     }
 
