@@ -54,6 +54,20 @@ Magic Transporter API is a RESTful API built with Node.js, TypeScript, and Mongo
 
    MONGODB_URI=mongodb://localhost:27017/magic-mover
 
-4. Run the API:
+4. Run the API in development mode:
    
    npm run dev
+
+5. Build the project :
+
+   npm run build
+
+
+6. run project in production mode :
+  
+  npm start
+
+
+7. to run tests : 
+  
+  npm test

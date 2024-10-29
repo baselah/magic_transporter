@@ -1,11 +1,14 @@
 import mongoose, { Document, Schema } from 'mongoose';
 
+
+//Activity Log Interface
 interface IActivityLog extends Document {
   moverId: mongoose.Types.ObjectId;
   state: 'loading' | 'on-mission' | 'resting';
   timestamp: Date;
 }
 
+//Activity Log Schema
 const ActivityLogSchema = new Schema<IActivityLog>({
   moverId: { type: Schema.Types.ObjectId, ref: 'MagicMover', required: true },
   state: {

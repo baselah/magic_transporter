@@ -1,5 +1,7 @@
 import mongoose, { Document, Types } from 'mongoose';
 
+
+//Magic Mover Schema
 const magicMoverSchema = new mongoose.Schema({
   weightLimit: { type: Number, required: true },
   questState: {
@@ -11,6 +13,8 @@ const magicMoverSchema = new mongoose.Schema({
   missionsCompleted: { type: Number, default: 0 },
 });
 
+
+//Magic Mover Interface
 export interface IMagicMover extends Document {
   weightLimit: number;
   questState: string;
